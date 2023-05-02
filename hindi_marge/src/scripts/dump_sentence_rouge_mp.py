@@ -70,7 +70,7 @@ def _mp_get_rouge_handler(dp):
         #set local path 
         path_parser.local_rouge_dir= "/Users/aashigupta/Library/Caches/pypoetry/virtualenvs/hindi-marge-WsGnlyNd-py3.9/lib/python3.9/site-packages/pyrouge-0.1.3-py3.9.egg/pyrouge/tools/ROUGE-1.5.5/data"
         # rouge_args = '-a -n 2 -m -c 95 -r 1000 -f A -p 0.5 -t 0 -d -x'  # standard nist eval
-        rouge_args = f'-a -n 2 -m -c 95 -r 1000 -f A -p 0.5 -t 0 -d -e {path_parser.local_rouge_dir} -x'
+        rouge_args = f'-a -n 2 -g -c 95 -r 1000 -f A -p 0.5 -t 0 -d -e {path_parser.local_rouge_dir} -x'
         #rouge_args = f'-a -n 2 -m -c 95 -r 1000 -f A -p 0.5 -t 0 -d -e /Users/aashigupta/Library/Caches/pypoetry/virtualenvs/hindi-marge-WsGnlyNd-py3.9/lib/python3.9/site-packages/pyrouge-0.1.3-py3.9.egg/pyrouge/tools/ROUGE-1.5.5/data -x'
 
         r = Rouge155(rouge_args=rouge_args)
